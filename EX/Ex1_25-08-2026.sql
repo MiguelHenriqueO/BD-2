@@ -33,3 +33,4 @@ VALUES
 INSERT into TB_Cliente(nome, telefone, tipo_cliente, nr_dependentes)
 VALUES
     ('Jubesval', '324678', 'Titular', 7)
+
