@@ -9,4 +9,3 @@ select F.nome from funcionarios as F
 LEFT JOIN departamentos as D
     ON F.codDepartamento = D.codDepartamento
 WHERE F.codFunc != codGerenProj
-
