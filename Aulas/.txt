@@ -1,0 +1,16 @@
+. Crie o banco de dados BdVestibular, implementando as tabelas com seus respectivos atributos, chaves primárias e estrangeiras.
+
+2. Implemente as seguintes regras de negócio utilizando constraints:
+a) Os cursos devem possuir carga horária de 2800 ou 3600 horas.
+b) Um candidato pode apresentar apenas uma das seguintes situações: Aprovado, Reprovado ou Aprovado em 2ª chamada.
+c) Uma inscrição pode apresentar apenas uma das seguintes situações: Aguardando pagamento, Cancelado, Encerrado ou Pago.
+d) A data de vencimento do boleto deve ser gerada automaticamente para 10 dias após a data de lançamento.
+e) Cada candidato pode realizar apenas uma inscrição por ano.
+f) A Primeira e a segunda opção de cursos não pode ser igual.
+g) A data de cadastro do candidato é inserida automaticamente com a data do sistema.
+
+3. Quando uma nova inscrição for realizada, o sistema deverá registrar a inscrição e gerar automaticamente um boleto de pagamento no banco de dados.
+
+4. Após a realização da prova do vestibular, o sistema deverá registrar a nota obtida pelo candidato na inscrição e atualizar a situação do candidato para um dos valores permitidos.
+
+5. Quando um pagamento for registrado, o sistema deverá atualizar os dados do pagamento e alterar a situação da inscrição correspondente para "Pago".
