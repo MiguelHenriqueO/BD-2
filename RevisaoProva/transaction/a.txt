@@ -1,0 +1,33 @@
+2. O seu exercício de TRANSACTION
+Crie uma transação explícita (usando BEGIN TRY ... BEGIN TRANSACTION ... COMMIT ... BEGIN CATCH ... ROLLBACK) para processar a compra de 2 unidades de Hollow Knight (IdJogo = 2, preço 60.00 cada -> total 120.00) feita pela Mariana (IdCliente = 2, saldo 50.00, estoque disponível 1).
+
+A transação precisa fazer 3 coisas na ordem certa:
+
+Inserir o registro na tabela Pedido (usando SCOPE_IDENTITY() se precisar guardar o ID gerado).
+
+Diminuir o Estoque do jogo na tabela Jogo.
+
+Diminuir o Saldo do cliente na tabela Cliente.
+
+Sua missão agora:
+
+Antes de escrever o código, olhe para os números da Mariana e do Hollow Knight: o que vai acontecer quando essa transação rodar? Vai dar COMMIT ou ROLLBACK? Por quê?
+
+Depois, escreva o seu rascunho da transação aqui!
+
+===========================================================
+
+Boa! Vamos testar um cenário que **dá certo de ponta a ponta** (`COMMIT TRANSACTION`), usando os mesmos dados iniciais do `LojaGamesProva`.
+
+Olhe para o que temos disponível:
+
+* **Lucas** (`IdCliente = 1`) tem **`Saldo = 200.00`**.
+* **Hollow Knight** (`IdJogo = 2`) custa **`60.00`** e tem **`Estoque = 1`**.
+
+**Sua nova missão:**
+Monte uma transação (`BEGIN TRY ... BEGIN TRANSACTION ... COMMIT ... BEGIN CATCH ... ROLLBACK`) para o **Lucas** comprar **`1` unidade** do **Hollow Knight** (`ValorTotal = 60.00`, data `'2026-05-20'`), atualizando o `Estoque` do jogo e o `Saldo` do cliente.
+
+Antes de rodar, me diga:
+
+1. Qual será o novo `Estoque` do Hollow Knight e o novo `Saldo` do Lucas depois do `COMMIT`?
+2. Como fica o seu código dessa transação?
